@@ -57,7 +57,7 @@ function GetApiResponse(){
                         // 將搜尋結果存儲在localStorage
                         localStorage.setItem('searchResults', JSON.stringify(Data));
                         // 跳轉至結果頁面
-                        window.location.href = 'html/search_results.html';
+                        window.location.href = 'search_results.html';
                     },
                     error: function (xhr, textStatus, thrownError) {
                         console.log('errorStatus:',textStatus);
@@ -75,7 +75,7 @@ function GetApiResponse(){
 
                     success: function (Data) {
                         localStorage.setItem('searchResults', JSON.stringify(Data));
-                        window.location.href = 'html/search_results.html';
+                        window.location.href = 'search_results.html';
                     },
                     error: function (xhr, textStatus, thrownError) {
                         console.log('errorStatus:',textStatus);
@@ -93,7 +93,7 @@ function GetApiResponse(){
                     
                     success: function (Data) {
                         localStorage.setItem('searchResults', JSON.stringify(Data));
-                        window.location.href = 'html/search_results.html';
+                        window.location.href = 'search_results.html';
                     },
                     error: function (xhr, textStatus, thrownError) {
                         console.log('errorStatus:',textStatus);
