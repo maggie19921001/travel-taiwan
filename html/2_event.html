@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/nav-page.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="top-bar mt-3">
+            <div class="logo"><a href="index.html"><img src="https://jennychang1020.github.io/THE-F2E/week1/img/Logo-desktop.svg" alt="logo"></a></div>
+            <!-- 漢堡選單 -->
+            <nav class="nav-box">
+                <input type="checkbox" id="menu-control">
+                <label for="menu-control" class="menu-btn"></label>
+                <ul class="menu-list fs-m fc-sub manu-list">
+                    <li class="pages"><a href="html/1_spot.html">探索景點</a></li>
+                    <li class="pages"><a href="html/2_event.html">節慶活動</a></li>
+                    <li class="pages"><a href="html/3_food.html">品嚐美食</a></li>
+                </ul>
+            </nav>    
+        </div>
+    </div>
+    <!-- content -->
+    <div class="container">
+        <div class="top-class fs-s fc-sub"><span class="index fc-dg">首頁</span> / 節慶活動</div>
+        <div class="page-search-box">
+            <select class="choose" >
+                <option class="choose-op" value="scene" class="fs-m fw-4">探索景點</option>
+                <option class="choose-op" value="event" class="fs-m fw-4">節慶活動</option>
+                <option class="choose-op" value="food" class="fs-m fw-4">品嚐美食</option>
+            </select>
+            <input class="page-type-box fs-s fw-4" id="search-txt" placeholder="你想去哪裡？請輸入關鍵字">
+            <button class="page-search" id="search-btn"></button>
+        </div>
+        <div class="section-top">
+            <div class="top-title fs-b fw-3 fc-title">熱門打卡景點</div>
+        </div>
+        <div class="section-main">
+            <a href="#" class="theme1-1 dfaic theme-w fw-7 fs-l">自然風景類</a>
+            <a href="#" class="theme1-2 dfaic theme-w fw-7 fs-l">觀光工廠類</a>
+            <a href="#" class="theme1-3 dfaic theme-w fw-7 fs-l">遊憩類</a>
+            <a href="#" class="theme1-4 dfaic theme-w fw-7 fs-l">休閒農業類</a>
+            <a href="#" class="theme1-5 dfaic theme-w fw-7 fs-l">生態類</a>
+            <a href="#" class="theme1-6 dfaic theme-w fw-7 fs-l">溫泉類</a>
+            <a href="#" class="theme1-7 dfaic theme-w fw-7 fs-l">古蹟類</a>
+        </div>
+    </div>
+    <div class="token">
+        <h3>取得憑證資料:</h3>
+        <div id="accesstoken" class="align-text-bottom">        
+        </div>
+        <h3>api 資料:</h3>
+        <div id="apireponse" class="align-text-bottom">        
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.3.1/sha.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+<footer>
+    <div class="footer-w dfaic">
+        © Copyright 2021 The F2E 3rd
+        UI Design：Breakfirst | Front-end：YuHuei
+        資料來源：運輸資料流通服務平臺 (TDX)
+    </div>
+</footer>
+</html>

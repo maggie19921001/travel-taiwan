@@ -1,0 +1,19 @@
+.result-top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 36px;
+    margin-bottom: 12px;
+    padding: 0px 10px;
+}
+.result-num{
+    padding-left: 10px;
+}
+.all-num{
+    color: rgb(188, 133, 44);
+}
+.result-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 30px;
+}

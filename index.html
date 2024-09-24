@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/all.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="top-bar mt-3">
+            <div class="logo"><a href="#"><img src="https://jennychang1020.github.io/THE-F2E/week1/img/Logo-desktop.svg" alt="logo"></a></div>
+            <!-- 漢堡選單 -->
+            <nav class="nav-box">
+                <input type="checkbox" id="menu-control">
+                <label for="menu-control" class="menu-btn"></label>
+                <ul class="menu-list fs-m fc-sub manu-list">
+                    <li class="pages"><a href="html/1_spot.html">探索景點</a></li>
+                    <li class="pages"><a href="html/2_event.html">節慶活動</a></li>
+                    <li class="pages"><a href="html/3_food.html">品嚐美食</a></li>
+                </ul>
+            </nav>    
+        </div>
+    </div>
+    <!-- content -->
+    <div class="container">
+        <div class="search-block">
+            <div class="sign-box">
+                <div class="sign ff-noto fc-title"><span class="mark"></span>探索台灣之美
+                    <br>
+                    讓我們更親近這片土地</div>
+                <div class="sub-sign fc-sub dfaic">
+                    <img src="images/Icon/spot24_Y.png" alt="">
+                    <span class="sub-c">台灣旅遊景點導覽</span>
+                    <span class="sub-e fw-7">Taiwan Travel Guide</span>
+                </div>
+            </div>
+            <div class="search-box">
+                <select class="choose">
+                    <option class="choose-op" value="scene" class="fs-m fw-4">探索景點</option>
+                    <option class="choose-op" value="event" class="fs-m fw-4">節慶活動</option>
+                    <option class="choose-op" value="food" class="fs-m fw-4">品嚐美食</option>
+                </select>
+                <input class="type-box fs-s fw-4" id="search-txt" placeholder="你想去哪裡？請輸入關鍵字">
+                <button class="search" id="search-btn"></button>
+                <div class="token">
+                    <h3>取得憑證資料:</h3>
+                    <div id="accesstoken" class="align-text-bottom">        
+                    </div>
+                    <h3>api 資料:</h3>
+                    <div id="apireponse" class="align-text-bottom">        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper-container swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+        <section class="event">
+            <div class="section-top">
+                <div class="top-title fs-b fw-3 fc-title">近期活動</div>
+                <div class="section-more dfaic">
+                    <p class="more-w fc-o">查看更多活動</p>
+                    <img src="images/Icon/arrow-right16_R.png" alt="">
+                </div>
+            </div>
+            <div class="event-main">
+                <div class="event-box">
+                    <div class="event-1 event-pic"></div>
+                    <div class="event-content">
+                        <div class="event-topic">
+                            <p class="event-date fs-s fs-4 fc-sub">2021/10/30 - 2021/11/13</p>
+                            <p class="event-name fc-pri fw-7">2021 日月潭花火音樂嘉年華</p>
+                        </div>
+                        <div class="event-detail">
+                            <div class="event-location dfaic">
+                                <img src="images/Icon/spot16.png" alt="">
+                                <span class="place fc-sub">南投縣</span>
+                            </div>
+                            <div class="event-more dfaic">
+                                <span class="more-p fc-g">詳細介紹</span>
+                                <img src="images/Icon/arrow-right16_G.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-box">
+                    <div class="event-2 event-pic"></div>
+                    <div class="event-content">
+                        <div class="event-topic">
+                            <p class="event-date fs-s fs-4 fc-sub">2021/10/30 - 2022/02/08</p>
+                            <p class="event-name fc-pri fw-7">山城花語溫泉系列活動－寶來不老溫泉季</p>
+                        </div>
+                        <div class="event-detail">
+                            <div class="event-location dfaic">
+                                <img src="images/Icon/spot16.png" alt="">
+                                <span class="place fc-sub">高雄市</span>
+                            </div>
+                            <div class="event-more dfaic">
+                                <span class="more-p fc-g">詳細介紹</span>
+                                <img src="images/Icon/arrow-right16_G.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-box">
+                    <div class="event-3 event-pic"></div>
+                    <div class="event-content">
+                        <div class="event-topic">
+                            <p class="event-date fs-s fs-4 fc-sub">2021/11/21 - 2021/11/21</p>
+                            <p class="event-name fc-pri fw-7">新北市萬金石馬拉松</p>
+                        </div>
+                        <div class="event-detail">
+                            <div class="event-location dfaic">
+                                <img src="images/Icon/spot16.png" alt="">
+                                <span class="place fc-sub">新北市</span>
+                            </div>
+                            <div class="event-more dfaic">
+                                <span class="more-p fc-g">詳細介紹</span>
+                                <img src="images/Icon/arrow-right16_G.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-box">
+                    <div class="event-4 event-pic"></div>
+                    <div class="event-content">
+                        <div class="event-topic">
+                            <p class="event-date fs-s fs-4 fc-sub">2021/11/27 - 2021/11/28</p>
+                            <p class="event-name fc-pri fw-7">2021 金門坑道音樂節</p>
+                        </div>
+                        <div class="event-detail">
+                            <div class="event-location dfaic">
+                                <img src="images/Icon/spot16.png" alt="">
+                                <span class="place fc-sub">金門縣</span>
+                            </div>
+                            <div class="event-more dfaic">
+                                <span class="more-p fc-g ">詳細介紹</span>
+                                <img src="images/Icon/arrow-right16_G.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hot-spot">
+            <div class="section-top">
+                <div class="top-title fs-b fw-3 fc-title">熱門打卡景點</div>
+                <div class="section-more dfaic">
+                    <p class="more-w fc-o">查看更多活動</p>
+                    <img src="images/Icon/arrow-right16_R.png" alt="">
+                </div>
+            </div>
+            <div class="spot-main">
+                <div class="spot-box">
+                    <div class="spot-1 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">宜蘭縣</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="spot-2 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">高美濕地(高美野生動...</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">臺中市</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="spot-3 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">溪頭自然教育園區</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">南投縣</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="spot-4 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">九份老街</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">新北市</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="good-food">
+            <div class="section-top">
+                <div class="top-title fs-b fw-3 fc-title">一再回訪美食</div>
+                <div class="section-more dfaic">
+                    <p class="more-w fc-o">查看更多活動</p>
+                    <img src="images/Icon/arrow-right16_R.png" alt="">
+                </div>
+            </div>
+            <div class="spot-main">
+                <div class="spot-box">
+                    <div class="food-1 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">金都餐廳</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">南投縣</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="food-2 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">一中8兩碳烤雞排</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">臺中市</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="food-3 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">名根烤肉食材宅配外送</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">新北市</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="food-4 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">石桌羊肉店</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">嘉義縣</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.3.1/sha.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+<footer>
+    <ul class="footer-w dfaic">
+        <li>© Copyright 2021 The F2E 3rd</li> 
+        <li>UI Design：Breakfirst | Front-end：YuHuei</li>
+        <li>資料來源：運輸資料流通服務平臺 (TDX)</li>
+    </ul>
+</footer>
+</html>

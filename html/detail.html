@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="top-bar mt-3">
+            <div class="logo"><a href="index.html"><img src="https://jennychang1020.github.io/THE-F2E/week1/img/Logo-desktop.svg" alt="logo"></a></div>
+            <!-- 漢堡選單 -->
+            <nav class="nav-box">
+                <input type="checkbox" id="menu-control">
+                <label for="menu-control" class="menu-btn"></label>
+                <ul class="menu-list fs-m fc-sub manu-list">
+                    <li class="pages"><a href="html/1_spot.html">探索景點</a></li>
+                    <li class="pages"><a href="html/2_event.html">節慶活動</a></li>
+                    <li class="pages"><a href="html/3_food.html">品嚐美食</a></li>
+                </ul>
+            </nav>    
+        </div>
+    </div>
+    <div class="token">
+        <h3>取得憑證資料:</h3>
+        <div id="accesstoken" class="align-text-bottom">        
+        </div>
+        <h3>api 資料:</h3>
+        <div id="apireponse" class="align-text-bottom">        
+        </div>
+    </div>
+    <!-- content -->
+    <div class="container ff-noto">
+        <div class="top-class fs-s fc-sub">
+            <span class="index fc-dg">首頁 / 探索景點 / <span class="city"><!-- City置入 --></span></span> / <span class=
+            "current-spot"><!-- SpotName置入 --></span>
+        </div>
+        <div class="main-photo-url"><img class="main-photo" src="images/Images/NoImage-1100x400.png" alt="no-photo"></div>
+        <p class="title top-title fs-b fw-3 fc-title current-spot"><!-- SpotName置入 --></p>
+        <ul class="tags fs-ml">
+            <!-- Class1/2置入 -->
+        </ul>
+        <p class="intro fs-ml fw-4 ff-noto">景點介紹：</p>
+        <p class="intro-content fs-m fw-3"><!-- Description+DescriptionDetail置入 --></p>
+        <section class="info-block">
+            <div class="basic-info fs-m fw-4 fc-pri">
+                <div><span class="open-time"><!-- OpenTime置入 --></span></div>
+                <div><span class="fs-ml fw-7">服務電話：</span><span class="phone-number"><!-- Phone置入 --></span></div>
+                <div><span class="fs-ml fw-7">景點地址：</span><span class="address"><!-- Address置入 --></span></div>
+                <div><span class="web-url"><!-- WebsiteUrl置入 --></span></div>
+                <div><span class="ticket-info"><!-- TicketInfo置入 --></span></div>
+                <div><span class="travel-info"><!-- TravelInfo置入 --></span></div>
+                <div><span class="remarks"><!-- Remarks置入 --></span></div>
+            </div>
+            <div class="other-info">
+                <img class="map" src="https://fakeimg.pl/540x250/#646464/000">
+                <p class="nearby-title fs-ml fw-7">周邊資訊：</p>
+                <div class="nearby">
+                    <a href="#">
+                    <div class="near-scene near-frame">
+                        <img class="near-icon" src="images/Icon/nearby-scene30.png">
+                        <p class="fs-s fc-g fw-7">附近景點</p>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div class="near-event  near-frame">
+                        <img class="near-icon" src="images/Icon/nearby-event30.png">
+                        <p class="fs-s fc-g fw-7">附近活動</p>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div class="near-food  near-frame">
+                        <img class="near-icon" src="images/Icon/nearby-food30.png">
+                        <p class="fs-s fc-g fw-7">附近美食</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="more-spot">
+            <p class="title top-title fs-b fw-3 fc-title">還有這些不能錯過的景點</p>
+            <div class="spot-frame">
+                <div class="spot-box">
+                    <div class="spot-1 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">宜蘭縣</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="spot-1 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">宜蘭縣</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="spot-1 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">宜蘭縣</span>
+                    </div>
+                </div>
+                <div class="spot-box">
+                    <div class="spot-1 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
+                    <div class="event-location dfaic">
+                        <img src="images/Icon/spot16.png" alt="">
+                        <span class="place fc-sub">宜蘭縣</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="token">
+        <h3>取得憑證資料:</h3>
+        <div id="accesstoken" class="align-text-bottom">        
+    </div>
+        <h3>api 資料:</h3>
+        <div id="apireponse" class="align-text-bottom">        
+    </div>
+</div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.3.1/sha.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+<footer>
+    <div class="footer-w dfaic">
+        © Copyright 2021 The F2E 3rd
+        UI Design：Breakfirst | Front-end：YuHuei
+        資料來源：運輸資料流通服務平臺 (TDX)
+    </div>
+</footer>
+</html>
