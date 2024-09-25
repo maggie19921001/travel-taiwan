@@ -188,7 +188,6 @@ a{
 .search-block{
     display: flex;
     justify-content: center;
-    /* padding-top: 160px; */
     gap: 77px;
     margin-bottom: 60px;
 }
@@ -214,12 +213,12 @@ a{
     display: flex;
     flex-direction: column;
     gap: 7px;
+    width: 350px;
 }
 .choose{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 350px;
     height: 50px;
     color: #6E7D60;
     border: solid 1px #E6E6E6;
@@ -232,7 +231,6 @@ a{
     background-repeat: no-repeat, repeat; 
 }
 .type-box{
-    width: 350px;
     height: 50px;
     border: solid 1px #E6E6E6;
     border-radius: 5px;
@@ -244,7 +242,7 @@ a{
 }
 .search{
     background-image: url(https://raw.githubusercontent.com/maggie19921001/travel-taiwan/9c2e592f364f12b1ed54e54ce984f8c3dc1268cd/css/images/Btn/horizon-style1.svg);
-    width: 350px;
+    /* width: 350px; */
     height: 50px;
     border: none;
     border-radius: 5px;
@@ -259,6 +257,13 @@ a{
     .search-block{
         flex-direction: column;
         align-items: center;
+  
+    }
+    .search-box{
+        max-width: 100%;  
+    }
+    .search{
+        background-position: center;
     }
     .sub-sign{
         display: flex;
@@ -353,6 +358,11 @@ a{
 	background-color: #FFFFFF;
 }
 @media (max-width:768px) {
+    .swiper{
+        height: 300px;
+        border-radius: 12px;
+        width: 100%;
+    }
     .swiper-slide {
         font-size: 16px;
         line-height: 1.5;
