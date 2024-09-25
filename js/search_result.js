@@ -145,64 +145,69 @@ function GetApiResponse(){
     
     searchBtn.addEventListener('click',function(e){
         const keyWord = searchTxt.value;
-        if(accesstoken !=undefined){
-            if(chooseType.value=='scene'){
-                $.ajax({
-                    type: 'GET',
-                    url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot?$filter=contains(ScenicSpotName,'${keyWord}')&$top=20&$format=JSON`,             
-                    headers: {
-                        "authorization": "Bearer " + accesstoken.access_token,
-                      },            
-                    async: false,
-                    
-                    success: function (data) {
-                        results = data
-                        displayResults(results)
-                    },
-                    error: function (xhr, textStatus, thrownError) {
-                        console.log('errorStatus:',textStatus);
-                        console.log('Error:',thrownError);
-                    }
-                });
-            }else if(chooseType.value=='event'){
-                $.ajax({
-                    type: 'GET',
-                    url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?$filter=contains(ActivityName,'${keyWord}')&$top=20&$format=JSON`,             
-                    headers: {
-                        "authorization": "Bearer " + accesstoken.access_token,
-                      },            
-                    async: false,
-                    
-                    success: function (data) {
-                        results = data
-                        displayResults(results)
-                    },
-                    error: function (xhr, textStatus, thrownError) {
-                        console.log('errorStatus:',textStatus);
-                        console.log('Error:',thrownError);
-                    }
-                });
-            }else if(chooseType.value=='food'){
-                $.ajax({
-                    type: 'GET',
-                    url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Restaurant?$filter=contains(RestaurantName,'${keyWord}')&$top=20&$format=JSON`,             
-                    headers: {
-                        "authorization": "Bearer " + accesstoken.access_token,
-                      },            
-                    async: false,
-                    
-                    success: function (data) {
-                        results = data
-                        displayResults(results)
-                    },
-                    error: function (xhr, textStatus, thrownError) {
-                        console.log('errorStatus:',textStatus);
-                        console.log('Error:',thrownError);
-                    }
-                });
+        if(keyWord==""){
+            alert('請輸入搜尋內容')
+        }else{
+            if(accesstoken !=undefined){
+                if(chooseType.value=='scene'){
+                    $.ajax({
+                        type: 'GET',
+                        url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot?$filter=contains(ScenicSpotName,'${keyWord}')&$top=20&$format=JSON`,             
+                        headers: {
+                            "authorization": "Bearer " + accesstoken.access_token,
+                          },            
+                        async: false,
+                        
+                        success: function (data) {
+                            results = data
+                            displayResults(results)
+                        },
+                        error: function (xhr, textStatus, thrownError) {
+                            console.log('errorStatus:',textStatus);
+                            console.log('Error:',thrownError);
+                        }
+                    });
+                }else if(chooseType.value=='event'){
+                    $.ajax({
+                        type: 'GET',
+                        url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?$filter=contains(ActivityName,'${keyWord}')&$top=20&$format=JSON`,             
+                        headers: {
+                            "authorization": "Bearer " + accesstoken.access_token,
+                          },            
+                        async: false,
+                        
+                        success: function (data) {
+                            results = data
+                            displayResults(results)
+                        },
+                        error: function (xhr, textStatus, thrownError) {
+                            console.log('errorStatus:',textStatus);
+                            console.log('Error:',thrownError);
+                        }
+                    });
+                }else if(chooseType.value=='food'){
+                    $.ajax({
+                        type: 'GET',
+                        url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Restaurant?$filter=contains(RestaurantName,'${keyWord}')&$top=20&$format=JSON`,             
+                        headers: {
+                            "authorization": "Bearer " + accesstoken.access_token,
+                          },            
+                        async: false,
+                        
+                        success: function (data) {
+                            results = data
+                            displayResults(results)
+                        },
+                        error: function (xhr, textStatus, thrownError) {
+                            console.log('errorStatus:',textStatus);
+                            console.log('Error:',thrownError);
+                        }
+                    });
+                }
+                
             }
-            
         }
+
 
     })
 

@@ -3,6 +3,7 @@
     padding-top: 40px;
     padding-left: 10px;
     gap: 15px;
+    width: 100%;
 }
 .page-type-box{
     width: 600px;
@@ -23,6 +24,10 @@
 }
 .page-search:hover{
     background-image: url(https://raw.githubusercontent.com/maggie19921001/travel-taiwan/9c2e592f364f12b1ed54e54ce984f8c3dc1268cd/css/images/Btn/horizon-style1_hover.svg);
+}
+.choose{
+    width: 350px;
+    background-position: 17rem;
 }
 @media (max-width:768px) {
     .page-search-box{

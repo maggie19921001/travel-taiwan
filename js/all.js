@@ -42,67 +42,72 @@ function GetApiResponse(){
     searchBtn.addEventListener('click',function(e){
         e.preventDefault(); // 阻止表單提交
         const keyWord = searchTxt.value;
-        if(accesstoken !=undefined){
-            if(chooseType.value=='scene'){
-                $.ajax({
-                    type: 'GET',
-                    url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot?$filter=contains(ScenicSpotName,'${keyWord}')&$top=20&$format=JSON`,             
-                    headers: {
-                        "authorization": "Bearer " + accesstoken.access_token,
-                      },            
-                    async: false,
-                    //Data是陣列
-                    success: function (Data) {
-                        // $('#apireponse').text(JSON.stringify(Data));                
-                        // 將搜尋結果存儲在localStorage
-                        localStorage.setItem('searchResults', JSON.stringify(Data));
-                        // 跳轉至結果頁面
-                        window.location.href = 'search_results.html';
-                    },
-                    error: function (xhr, textStatus, thrownError) {
-                        console.log('errorStatus:',textStatus);
-                        console.log('Error:',thrownError);
-                    }
-                });
-            }else if(chooseType.value=='event'){
-                $.ajax({
-                    type: 'GET',
-                    url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?$filter=contains(ActivityName,'${keyWord}')&$top=20&$format=JSON`,             
-                    headers: {
-                        "authorization": "Bearer " + accesstoken.access_token,
-                      },            
-                    async: false,
-
-                    success: function (Data) {
-                        localStorage.setItem('searchResults', JSON.stringify(Data));
-                        window.location.href = 'search_results.html';
-                    },
-                    error: function (xhr, textStatus, thrownError) {
-                        console.log('errorStatus:',textStatus);
-                        console.log('Error:',thrownError);
-                    }
-                });
-            }else if(chooseType.value=='food'){
-                $.ajax({
-                    type: 'GET',
-                    url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Restaurant?$filter=contains(RestaurantName,'${keyWord}')&$top=20&$format=JSON`,             
-                    headers: {
-                        "authorization": "Bearer " + accesstoken.access_token,
-                      },            
-                    async: false,
-                    
-                    success: function (Data) {
-                        localStorage.setItem('searchResults', JSON.stringify(Data));
-                        window.location.href = 'search_results.html';
-                    },
-                    error: function (xhr, textStatus, thrownError) {
-                        console.log('errorStatus:',textStatus);
-                        console.log('Error:',thrownError);
-                    }
-                });
+        if(keyWord==""){
+            alert("請輸入搜尋文字")
+        }else{
+            if(accesstoken !=undefined){
+                if(chooseType.value=='scene'){
+                    $.ajax({
+                        type: 'GET',
+                        url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot?$filter=contains(ScenicSpotName,'${keyWord}')&$top=20&$format=JSON`,             
+                        headers: {
+                            "authorization": "Bearer " + accesstoken.access_token,
+                          },            
+                        async: false,
+                        //Data是陣列
+                        success: function (Data) {
+                            // $('#apireponse').text(JSON.stringify(Data));                
+                            // 將搜尋結果存儲在localStorage
+                            localStorage.setItem('searchResults', JSON.stringify(Data));
+                            // 跳轉至結果頁面
+                            window.location.href = 'search_results.html';
+                        },
+                        error: function (xhr, textStatus, thrownError) {
+                            console.log('errorStatus:',textStatus);
+                            console.log('Error:',thrownError);
+                        }
+                    });
+                }else if(chooseType.value=='event'){
+                    $.ajax({
+                        type: 'GET',
+                        url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?$filter=contains(ActivityName,'${keyWord}')&$top=20&$format=JSON`,             
+                        headers: {
+                            "authorization": "Bearer " + accesstoken.access_token,
+                          },            
+                        async: false,
+    
+                        success: function (Data) {
+                            localStorage.setItem('searchResults', JSON.stringify(Data));
+                            window.location.href = 'search_results.html';
+                        },
+                        error: function (xhr, textStatus, thrownError) {
+                            console.log('errorStatus:',textStatus);
+                            console.log('Error:',thrownError);
+                        }
+                    });
+                }else if(chooseType.value=='food'){
+                    $.ajax({
+                        type: 'GET',
+                        url: `https://tdx.transportdata.tw/api/basic/v2/Tourism/Restaurant?$filter=contains(RestaurantName,'${keyWord}')&$top=20&$format=JSON`,             
+                        headers: {
+                            "authorization": "Bearer " + accesstoken.access_token,
+                          },            
+                        async: false,
+                        
+                        success: function (Data) {
+                            localStorage.setItem('searchResults', JSON.stringify(Data));
+                            window.location.href = 'search_results.html';
+                        },
+                        error: function (xhr, textStatus, thrownError) {
+                            console.log('errorStatus:',textStatus);
+                            console.log('Error:',thrownError);
+                        }
+                    });
+                }
+                
             }
-            
         }
+
 
     })
 
