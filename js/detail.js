@@ -57,7 +57,6 @@ function GetApiResponse(){
         async: false,
 
         success: function (Data) {
-          console.log(Data);
           city.innerHTML = Data[0].City;
           currentSpot[0].innerHTML = Data[0].ScenicSpotName;
           currentSpot[1].innerHTML = Data[0].ScenicSpotName;
@@ -170,7 +169,6 @@ function GetApiResponse(){
           },            
         async: false,
         success: function (Data) {
-          console.log(Data);
           city.innerHTML = Data[0].City;
           currentSpot[0].innerHTML = Data[0].ActivityName;
           currentSpot[1].innerHTML = Data[0].ActivityName;
@@ -278,7 +276,6 @@ function GetApiResponse(){
           },            
         async: false,
         success: function (Data) {
-          console.log(Data);
           city.innerHTML = Data[0].City;
           currentSpot[0].innerHTML = Data[0].RestaurantName;
           currentSpot[1].innerHTML = Data[0].RestaurantName;
@@ -386,7 +383,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // 從localStorage中獲取搜尋結果
   let results = JSON.parse(localStorage.getItem('searchResults'));
   displayResults(results);
-  console.log(results);
 });
 
 //TODO 只顯示四筆資料
@@ -403,7 +399,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                   <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                   <div class="event-location dfaic">
-                  <img src="css/images/icon/spot16.svg" alt="">
+                  <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -414,7 +410,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                   <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                   <div class="event-location dfaic">
-                  <img src="css/images/icon/spot16.svg" alt="">
+                  <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -427,7 +423,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                   <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                   <div class="event-location dfaic">
-                  <img src="css/images/icon/spot16.svg" alt="">
+                  <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -438,7 +434,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                   <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                   <div class="event-location dfaic">
-                  <img src="css/images/icon/spot16.svg" alt="">
+                  <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -451,7 +447,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                   <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                   <div class="event-location dfaic">
-                  <img src="css/images/icon/spot16.svg" alt="">
+                  <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -462,7 +458,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                   <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                   <div class="event-location dfaic">
-                  <img src="css/images/icon/spot16.svg" alt="">
+                  <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>

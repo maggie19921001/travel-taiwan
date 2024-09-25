@@ -34,7 +34,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                     <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                     <div class="event-location dfaic">
-                    <img src="css/images/icon/spot16.svg" alt="">
+                    <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                     <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                     <div class="event-location dfaic">
-                    <img src="css/images/icon/spot16.png" alt="">
+                    <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                     <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                     <div class="event-location dfaic">
-                    <img src="css/images/icon/spot16.svg" alt="">
+                    <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                     <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                     <div class="event-location dfaic">
-                    <img src="css/images/icon/spot16.svg" alt="">
+                    <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                     <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                     <div class="event-location dfaic">
-                    <img src="css/images/icon/spot16.svg" alt="">
+                    <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                     <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                     <div class="event-location dfaic">
-                    <img src="css/images/icon/spot16.svg" alt="">
+                    <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
