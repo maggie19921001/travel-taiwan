@@ -78,6 +78,14 @@ a{
     display: flex;
     align-items: center;
 }
+@media (max-width:768px) {
+    .fs-b {font-size: 25px;}
+    .fs-l {font-size: 20px;}
+    .fs-ml {font-size:18px;}
+    .fs-m {font-size: 16px;}
+    .fs-s {font-size: 13px;}
+    .fw-7 {font-weight: 500;}
+}
 
 /*----------------------------nav--------------------------*/
 /*選單線*/
@@ -252,11 +260,31 @@ a{
         flex-direction: column;
         align-items: center;
     }
+    .sub-sign{
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+        padding-top: 20px;
+        gap: 10px;
+    }
+    .sign{
+        position: relative;
+        font-size: 40px;
+        font-weight: 200;
+        line-height: 1.3;
+    }
+    .mark{
+        position: absolute;
+        width: 160px;
+        height: 2px;
+        background-color: #E0DA48;
+        top: 50px;
+        left: 80px;
+    }
 }
 /*----------------------------part2 Loop Photo--------------------------*/
 .swiper{
     height: 300px;
-    /* width: 100%; */
     border-radius: 24px;
 }
 .swiper-slide {
@@ -283,7 +311,7 @@ a{
     border: solid 2px #FFFFFF;
     border-radius: 50%;
 }
-/*TODO swiper按鈕樣式修改*/
+
 .swiper-button-next{
     filter: brightness(100);
 }
@@ -324,6 +352,20 @@ a{
 	width: 20px;
 	background-color: #FFFFFF;
 }
+@media (max-width:768px) {
+    .swiper-slide {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .swiper-button-next{
+        display: none;
+    }
+    .swiper-button-prev{
+        display: none;
+    }
+    
+}
+
 /*----------------------------part3 Event--------------------------*/
 .section-top{
     display: flex;
@@ -343,7 +385,6 @@ a{
     background-color: #F9F9F9;
     border: solid 1px #E5E5E5;
     border-radius: 12px;
-
     display: flex;
 }
 .event-1{
@@ -397,14 +438,24 @@ a{
     .event-box{
         width: 100%;
     }
+    .event-content{
+        width: 70%;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+    .event-name{
+        font-size: 18px;
+        line-height: 1.2;
+    }
  }
 /*----------------------------part4 Hot Spot--------------------------*/
 .spot-main{
+    margin-top: 20px;
     display: flex;
     gap: 30px;
 }
 .spot-box{
-    height: 302px;
+    /* height: 302px; */
     max-width: 255px;
 }
 .spot-1{
@@ -417,30 +468,39 @@ a{
     background-image: url(images/photo/spot-3.jpeg);
 }
 .spot-4{
-    background-image: url(images/[photo]/spot-4.jpeg);
+    background-image: url(images/photo/spot-4.jpeg);
 }
 .spot-pic{
-    width: 255px;
+    min-width: 255px;
     height: 200px;
     background-size: cover;
     background-position: center;
     border-radius: 20px;
     overflow: hidden;
-    background-image: url(images/photo/Rectangle\ 85.png);/*預設圖*/
+    /* background-image: url(images/photo/Rectangle\ 85.png);預設圖 */
 }
 .spot-name{
     font-size: 22px;
     margin-top: 10px;
-    margin-bottom: 6px;
-    height: 64px;
-    line-height: 1.4;
+    margin-bottom: 15px;
+    /* height: 64px; */
+    /* line-height: 1.4; */
     overflow: hidden;
     text-overflow: ellipsis " [..]";
 }
 @media (max-width:768px) {
     .spot-main{
+        margin-top: 40px;
+        display: flex;
+        gap: 0px;
+    }
+    .spot-main{
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .spot-box{
+        height: 302px;
+        max-width: 90%;
     }
 }
 /*----------------------------part5 Good food--------------------------*/

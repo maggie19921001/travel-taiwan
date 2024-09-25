@@ -142,7 +142,7 @@ function renderSwiper(){
         // const address = result.Address.substring(0,3);
         str+=`
         <div class="swiper-slide">
-            <p class="photo-title fw-7"> ${result.City}｜${result.ScenicSpotName}</p>
+            <p class="photo-title fw-7"> ${result.City}<br>${result.ScenicSpotName}</p>
             <img class="loop-photo" src="${result.Picture.PictureUrl1}"> 
         </div>` 
     });
