@@ -121,6 +121,40 @@ function GetApiResponse(){
           if(Data[0].Remarks){
             remarks.innerHTML =`<span class="fs-ml fw-7">注意事項：</span>${Data[0].Remarks}`;
           }
+
+          /*
+          * @license
+          * Copyright 2019 Google LLC. All Rights Reserved.
+          * SPDX-License-Identifier: Apache-2.0
+          */
+          // Initialize and add the map
+          let map;
+
+          async function initMap() {
+            // The location of Uluru
+            const position = { lat: Data[0].Position.PositionLat, lng: Data[0].Position.PositionLon };
+            // Request needed libraries.
+            //@ts-ignore
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+            // The map, centered at Uluru
+            map = new Map(document.getElementById("map"), {
+              zoom: 15,
+              center: position,
+              mapId: ID,
+            });
+
+            // The marker, positioned at Uluru
+            const marker = new AdvancedMarkerElement({
+              map: map,
+              position: position,
+              title: Data[0].ScenicSpotName,
+            });
+          }
+
+          initMap();
+
         },
         error: function (xhr, textStatus, thrownError) {
             console.log('errorStatus:',textStatus);
@@ -196,6 +230,39 @@ function GetApiResponse(){
           if(Data[0].Remarks){
             remarks.innerHTML =`<span class="fs-ml fw-7">注意事項：</span>${Data[0].Remarks}`;
           }
+
+                    /*
+          * @license
+          * Copyright 2019 Google LLC. All Rights Reserved.
+          * SPDX-License-Identifier: Apache-2.0
+          */
+          // Initialize and add the map
+          let map;
+
+          async function initMap() {
+            // The location of Uluru
+            const position = { lat: Data[0].Position.PositionLat, lng: Data[0].Position.PositionLon };
+            // Request needed libraries.
+            //@ts-ignore
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+            // The map, centered at Uluru
+            map = new Map(document.getElementById("map"), {
+              zoom: 15,
+              center: position,
+              mapId: ID,
+            });
+
+            // The marker, positioned at Uluru
+            const marker = new AdvancedMarkerElement({
+              map: map,
+              position: position,
+              title: Data[0].ActivityName,
+            });
+          }
+
+          initMap();
         },
         error: function (xhr, textStatus, thrownError) {
             console.log('errorStatus:',textStatus);
@@ -269,8 +336,41 @@ function GetApiResponse(){
           }
           const remarks = document.querySelector('.remarks');
           if(Data[0].Remarks){
-            remarks.innerHTML =`<span class="fs-ml fw-7">注意事項：</span>${Data[0].Remarks}`;
+            remarks.innerHTML =`<span class="fs-ml fw-7">注意事項：</span>${Data[0].Remarks}`;  
           }
+                    /*
+          * @license
+          * Copyright 2019 Google LLC. All Rights Reserved.
+          * SPDX-License-Identifier: Apache-2.0
+          */
+          // Initialize and add the map
+          let map;
+
+          async function initMap() {
+            // The location of Uluru
+            const position = { lat: Data[0].Position.PositionLat, lng: Data[0].Position.PositionLon };
+            // Request needed libraries.
+            //@ts-ignore
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+            // The map, centered at Uluru
+            map = new Map(document.getElementById("map"), {
+              zoom: 15,
+              center: position,
+              mapId: ID,
+            });
+
+            // The marker, positioned at Uluru
+            const marker = new AdvancedMarkerElement({
+              map: map,
+              position: position,
+              title: Data[0].RestaurantName,
+            });
+          }
+
+          initMap();
+
         },
         error: function (xhr, textStatus, thrownError) {
             console.log('errorStatus:',textStatus);
@@ -303,7 +403,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                   <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                   <div class="event-location dfaic">
-                  <img src="/images/Icon/spot16.png" alt="">
+                  <img src="css/images/icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -311,10 +411,10 @@ function displayResults(results) {
           }else{
               str+=`<a href="detail.html?id=${result.ScenicSpotID}">
                   <div class="spot-box">
-                  <div class="spot-pic" style="background-image: url(/images/Images/NoImage-255x200.png);" aria-label="無附圖"></div>
+                  <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                   <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                   <div class="event-location dfaic">
-                  <img src="/images/Icon/spot16.png" alt="">
+                  <img src="css/images/icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -327,7 +427,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                   <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                   <div class="event-location dfaic">
-                  <img src="/images/Icon/spot16.png" alt="">
+                  <img src="css/images/icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -335,10 +435,10 @@ function displayResults(results) {
           }else{
               str+=`<a href="detail.html?id=${result.ActivityID}">
                   <div class="spot-box">
-                  <div class="spot-pic" style="background-image: url(/images/Images/NoImage-255x200.png);" aria-label="無附圖"></div>
+                  <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                   <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                   <div class="event-location dfaic">
-                  <img src="/images/Icon/spot16.png" alt="">
+                  <img src="css/images/icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -351,7 +451,7 @@ function displayResults(results) {
                   <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                   <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                   <div class="event-location dfaic">
-                  <img src="/images/Icon/spot16.png" alt="">
+                  <img src="css/images/icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -359,10 +459,10 @@ function displayResults(results) {
           }else{
               str+=`<a href="detail.html?id=${result.RestaurantID}">
                   <div class="spot-box">
-                  <div class="spot-pic" style="background-image: url(/images/Images/NoImage-255x200.png);" aria-label="無附圖"></div>
+                  <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                   <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                   <div class="event-location dfaic">
-                  <img src="/images/Icon/spot16.png" alt="">
+                  <img src="css/images/icon/spot16.svg" alt="">
                   <span class="place fc-sub">${result.City}</span>
                   </div>
               </div>
@@ -372,3 +472,4 @@ function displayResults(results) {
   });
   spotFrame.innerHTML = str;
 }
+

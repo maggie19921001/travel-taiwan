@@ -13,7 +13,7 @@
     padding-left: 30px;
 }
 .page-search{
-    background-image: url(images/Btn/horizon-style1.png);
+    background-image: url(images/btn/horizon-style1.png);
     width: 210px;
     height: 50px;
     border: none;
@@ -22,7 +22,7 @@
     background-position: center;
 }
 .page-search:hover{
-    background-image: url(images/Btn/horizon-style1_hover.png);
+    background-image: url(images/btn/horizon-style1_hover.png);
 }
 /*----------------------------Category--------------------------*/
 .section-main{
@@ -38,23 +38,23 @@
     text-decoration: none;
 }
 .theme1-1{
-    background-image: url(images/Images/Theme-bg1-1.png);
+    background-image: url(images/photo/Theme-bg1-1.png);
 }
 .theme1-2{
-    background-image: url(images/Images/Theme-bg1-2.png);
+    background-image: url(images/photo/Theme-bg1-2.png);
 }
 .theme1-3{
-    background-image: url(images/Images/Theme-bg1-3.png);
+    background-image: url(images/photo/Theme-bg1-3.png);
 }
 .theme1-4{
-    background-image: url(images/Images/Theme-bg1-4.png);
+    background-image: url(images/photo/Theme-bg1-4.png);
 }
 .theme1-5{
-    background-image: url(images/Images/Theme-bg1-5.png);
+    background-image: url(images/photo/Theme-bg1-5.png);
 }
 .theme1-6{
-    background-image: url(images/Images/Theme-bg1-6.png);
+    background-image: url(images/photo/Theme-bg1-6.png);
 }
 .theme1-7{
-    background-image: url(images/Images/Theme-bg1-7.png);
+    background-image: url(images/photo/Theme-bg1-7.png);
 }

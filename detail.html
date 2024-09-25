@@ -42,7 +42,7 @@
             <span class="index fc-dg">首頁 / 探索景點 / <span class="city"><!-- City置入 --></span></span> / <span class=
             "current-spot"><!-- SpotName置入 --></span>
         </div>
-        <div class="main-photo-url"><img class="main-photo" src="images/Images/NoImage-1100x400.png" alt="no-photo"></div>
+        <div class="main-photo-url"><img class="main-photo" src="css/images/photo/NoImage-1100x400.png" alt="no-photo"></div>
         <p class="title top-title fs-b fw-3 fc-title current-spot"><!-- SpotName置入 --></p>
         <ul class="tags fs-ml">
             <!-- Class1/2置入 -->
@@ -60,24 +60,31 @@
                 <div><span class="remarks"><!-- Remarks置入 --></span></div>
             </div>
             <div class="other-info">
-                <img class="map" src="https://fakeimg.pl/540x250/#646464/000">
+                <!--The div element for the map -->
+                <div id="map"></div>
+
+                <!-- prettier-ignore -->
+                <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${
+                c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+                    ({key: "AIzaSyDP9sM7OMyXVzP50Wl1DmBQLiNRHo6sXNc", v: "weekly"});</script>
+
                 <p class="nearby-title fs-ml fw-7">周邊資訊：</p>
                 <div class="nearby">
                     <a href="#">
                     <div class="near-scene near-frame">
-                        <img class="near-icon" src="images/Icon/nearby-scene30.png">
+                        <img class="near-icon" src="css/images/icon/nearby-scene30.png">
                         <p class="fs-s fc-g fw-7">附近景點</p>
                     </div>
                     </a>
                     <a href="#">
                     <div class="near-event  near-frame">
-                        <img class="near-icon" src="images/Icon/nearby-event30.png">
+                        <img class="near-icon" src="css/images/icon/nearby-event30.png">
                         <p class="fs-s fc-g fw-7">附近活動</p>
                     </div>
                     </a>
                     <a href="#">
                     <div class="near-food  near-frame">
-                        <img class="near-icon" src="images/Icon/nearby-food30.png">
+                        <img class="near-icon" src="css/images/icon/nearby-food30.png">
                         <p class="fs-s fc-g fw-7">附近美食</p>
                     </div>
                     </a>
@@ -91,7 +98,7 @@
                     <div class="spot-1 spot-pic"></div>
                     <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
                     <div class="event-location dfaic">
-                        <img src="images/Icon/spot16.png" alt="">
+                        <img src="css/images/icon/spot16.svg" alt="">
                         <span class="place fc-sub">宜蘭縣</span>
                     </div>
                 </div>
@@ -99,7 +106,7 @@
                     <div class="spot-1 spot-pic"></div>
                     <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
                     <div class="event-location dfaic">
-                        <img src="images/Icon/spot16.png" alt="">
+                        <img src="css/images/icon/spot16.svg" alt="">
                         <span class="place fc-sub">宜蘭縣</span>
                     </div>
                 </div>
@@ -107,7 +114,7 @@
                     <div class="spot-1 spot-pic"></div>
                     <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
                     <div class="event-location dfaic">
-                        <img src="images/Icon/spot16.png" alt="">
+                        <img src="css/images/icon/spot16.svg" alt="">
                         <span class="place fc-sub">宜蘭縣</span>
                     </div>
                 </div>
@@ -115,7 +122,7 @@
                     <div class="spot-1 spot-pic"></div>
                     <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
                     <div class="event-location dfaic">
-                        <img src="images/Icon/spot16.png" alt="">
+                        <img src="css/images/icon/spot16.svg" alt="">
                         <span class="place fc-sub">宜蘭縣</span>
                     </div>
                 </div>

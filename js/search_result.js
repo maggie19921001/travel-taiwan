@@ -34,7 +34,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                     <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                     <div class="event-location dfaic">
-                    <img src="/images/Icon/spot16.png" alt="">
+                    <img src="css/images/icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -42,10 +42,10 @@ function displayResults(results) {
             }else{
                 str+=`<a href="detail.html?id=${result.ScenicSpotID}">
                     <div class="spot-box">
-                    <div class="spot-pic" style="background-image: url(/images/Images/NoImage-255x200.png);" aria-label="無附圖"></div>
+                    <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                     <p class="spot-name fc-pri fw-7">${result.ScenicSpotName}</p>
                     <div class="event-location dfaic">
-                    <img src="/images/Icon/spot16.png" alt="">
+                    <img src="css/images/icon/spot16.png" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                     <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                     <div class="event-location dfaic">
-                    <img src="/images/Icon/spot16.png" alt="">
+                    <img src="css/images/icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -66,10 +66,10 @@ function displayResults(results) {
             }else{
                 str+=`<a href="detail.html?id=${result.ActivityID}">
                     <div class="spot-box">
-                    <div class="spot-pic" style="background-image: url(/images/Images/NoImage-255x200.png);" aria-label="無附圖"></div>
+                    <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                     <p class="spot-name fc-pri fw-7">${result.ActivityName}</p>
                     <div class="event-location dfaic">
-                    <img src="/images/Icon/spot16.png" alt="">
+                    <img src="css/images/icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ function displayResults(results) {
                     <div class="spot-pic" style="background-image: url(${result.Picture.PictureUrl1}); aria-label="${result.PictureDescription1}""></div>
                     <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                     <div class="event-location dfaic">
-                    <img src="/images/Icon/spot16.png" alt="">
+                    <img src="css/images/icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>
@@ -90,10 +90,10 @@ function displayResults(results) {
             }else{
                 str+=`<a href="detail.html?id=${result.RestaurantID}">
                     <div class="spot-box">
-                    <div class="spot-pic" style="background-image: url(/images/Images/NoImage-255x200.png);" aria-label="無附圖"></div>
+                    <div class="spot-pic" style="background-image: url(css/images/photo/NoImage-255x200.png);" aria-label="無附圖"></div>
                     <p class="spot-name fc-pri fw-7">${result.RestaurantName}</p>
                     <div class="event-location dfaic">
-                    <img src="/images/Icon/spot16.png" alt="">
+                    <img src="css/images/icon/spot16.svg" alt="">
                     <span class="place fc-sub">${result.City}</span>
                     </div>
                 </div>

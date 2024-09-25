@@ -34,6 +34,7 @@
     display: flex;
     gap: 30px;
     margin-bottom: 60px;
+    height: 100%;
 }
 .basic-info{
     min-width: 50%;
@@ -41,15 +42,16 @@
     background-color: #f9f9f9;
     padding: 30px;
     line-height: 1.8;
+
 }
 .other-info{
     max-width: 50%;
     
 }
-.map{
+/* .map{
     border-radius: 12px;
     margin-bottom: 32px;
-}
+} */
 .nearby-title{
     margin-bottom: 20px;
 }
@@ -74,3 +76,16 @@
     display: flex;
     gap: 30px;
 }
+
+/*----------------------------MAP--------------------------*/
+/*
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+ #map {
+    height: 250px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
