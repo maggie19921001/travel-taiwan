@@ -17,3 +17,13 @@
     flex-wrap: wrap;
     gap: 12px 30px;
 }
+.spot-name{
+    height: 64px;
+    line-height: 1.4;
+}
+@media (max-width:768px) {
+    .result-main{
+        flex-direction: column;
+       gap: 30px;
+    }
+}
