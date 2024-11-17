@@ -2,6 +2,9 @@ $(function () {
     GetAuthorizationHeader();
     GetApiResponse();    
     getPhoto();
+    loadEvent();
+    loadSpot();
+    loadFood();
 });
 
 
@@ -32,6 +35,8 @@ function GetAuthorizationHeader() {
     });          
 }
 //NOTE 如果要將 js 運行在伺服器，可在ajax-get-headers中額外加入 'Accept-Encoding': 'gzip'，要求壓縮以減少網路傳輸資料量
+
+//搜尋功能
 function GetApiResponse(){    
     let accesstokenStr = $("#accesstoken").text();    
     let accesstoken = JSON.parse(accesstokenStr); 
@@ -173,4 +178,272 @@ var swiper = new Swiper(".swiper-container", {
   });
   
 }
+
+
+function loadEvent(){
+    let accesstokenStr = $("#accesstoken").text();    
+    let accesstoken = JSON.parse(accesstokenStr); 
+    if(accesstoken !=undefined){
+        $.ajax({
+            type: 'GET',
+            url: 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=4&%24format=JSON',             
+            headers: {
+                "authorization": "Bearer " + accesstoken.access_token,
+              },            
+            async: false,
+            success: function (apiData) {
+                console.log(apiData);
+
+                function createEventBox(eventData){
+                    const eventBox = document.createElement('div');
+                    eventBox.className = "event-box";
+                
+                    const eventPic = document.createElement('div');
+                    eventPic.className = "event-1 event-pic";
+                    eventPic.style.backgroundImage = `url(${eventData.Picture.PictureUrl1})`;
+                    eventBox.appendChild(eventPic);
+                
+                    const eventContent = document.createElement('div');
+                    eventContent.className = "event-content";
+                
+                    const eventTopic = document.createElement('div');
+                    eventTopic.className = "event-topic";
+                
+                    const eventDate = document.createElement('p');
+                    eventDate.className = "event-date fs-s fs-4 fc-sub";
+                    const startDate = new Date(eventData.StartTime);
+                    const endDate = new Date(eventData.EndTime);
+                    const formattedDate = `
+                    ${startDate.getFullYear()}/${(startDate.getMonth() + 1).toString().padStart(2, '0')}/${startDate.getDate().toString().padStart(2, '0')}
+                    -${endDate.getFullYear()}/${(endDate.getMonth() + 1).toString().padStart(2, '0')}/${endDate.getDate().toString().padStart(2, '0')}`;
+
+                    eventDate.textContent = formattedDate;
+                
+                    const eventName = document.createElement('p');
+                    eventName.className = "event-name fc-pri fw-7";
+                    eventName.textContent = eventData.ActivityName;
+                
+                    eventTopic.append(eventDate, eventName);
+                    eventContent.appendChild(eventTopic);
+                
+                    const eventDetail = document.createElement('div');
+                    eventDetail.className = "event-detail";
+                
+                    const eventLocation = document.createElement('div');
+                    eventLocation.className = "event-location dfaic";
+                    
+                    const locationImg = document.createElement('img');
+                    locationImg.src = "https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg"
+                
+                    const locationSpan = document.createElement('span');
+                    locationSpan.className = "place fc-sub fs-s";
+                    locationSpan.textContent = eventData.Location;//改顯示前面三個字
+                
+                    eventLocation.append(locationImg,locationSpan);
+                    eventDetail.appendChild(eventLocation);
+                
+                    const eventMore = document.createElement('div');
+                    eventMore.className = "event-more dfaic";
+                
+                    const moreSpan = document.createElement('sapn');
+                    moreSpan.className = "more-p fc-g fs-s";
+                    moreSpan.textContent = "詳細介紹";
+                    
+                    const moreImg = document.createElement('img');
+                    moreImg.src = "https://raw.githubusercontent.com/maggie19921001/travel-taiwan/9c2e592f364f12b1ed54e54ce984f8c3dc1268cd/css/images/Icon/arrow-right16_G.svg"
+                
+                    const eventBoxLink = document.createElement('a');
+                    eventBoxLink.href = `detail.html?id=${eventData.ActivityID}`;
+                    eventBoxLink.append(moreSpan, moreImg);
+
+                    eventMore.appendChild(eventBoxLink)
+                    eventDetail.appendChild(eventMore);
+                
+                    eventContent.appendChild(eventDetail);
+                    eventBox.appendChild(eventContent);
+
+                    return eventBox;
+                 }
+                
+                /* 
+                <a href="detail.html?id=${result.ScenicSpotID}">
+                <div class="event-box">
+                <div class="event-1 event-pic" style="background-image: url(/css/images/photo/event-1.jpeg);"></div>
+                <div class="event-content">
+                    <div class="event-topic">
+                        <p class="event-date fs-s fs-4 fc-sub">2024/10/30 - 2024/11/13</p>
+                        <p class="event-name fc-pri fw-7">2024日月潭花火音樂嘉年華</p>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-location dfaic">
+                            <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
+                            <span class="place fc-sub fs-s">南投縣</span>
+                        </div>
+                
+                        <div class="event-more dfaic">
+                            <span class="more-p fc-g fs-s">詳細介紹</span>
+                            <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/9c2e592f364f12b1ed54e54ce984f8c3dc1268cd/css/images/Icon/arrow-right16_G.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                </div> */
+                const eventMain = document.querySelector('#event-main');
+                apiData.forEach(eventData=>{
+                    const eventBox = createEventBox(eventData);
+                    eventMain.appendChild(eventBox);
+                })
+
+            },
+            error: function (xhr, textStatus, thrownError) {
+                console.log('errorStatus:',textStatus);
+                console.log('Error:',thrownError);
+            }
+        });
+    }
+}
+
+function loadSpot(){
+    let accesstokenStr = $("#accesstoken").text();    
+    let accesstoken = JSON.parse(accesstokenStr); 
+    if(accesstoken !=undefined){
+        $.ajax({
+            type: 'GET',
+            url: 'https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot?%24orderby=UpdateTime%20desc&%24top=30&%24format=JSON',             
+            headers: {
+                "authorization": "Bearer " + accesstoken.access_token,
+              },            
+            async: false,
+            success: function (apiData) {
+                console.log(apiData);
+
+                function createSpotBox(spotData){
+                    const spotBox = document.createElement('div');
+                    spotBox.className = "spot-box";
+                
+                    const spotPic = document.createElement("div");
+                    spotPic.className = "spot-1 spot-pic";
+                    if (spotData?.Picture?.PictureUrl1){
+                        spotPic.style.backgroundImage = `url(${spotData.Picture.PictureUrl1})`;
+                    }
+
+                    const spotName = document.createElement('p');
+                    spotName.className = "spot-name fc-pri fw-7";
+                    spotName.textContent = spotData.ScenicSpotName;
+                
+                    const eventLocation = document.createElement('div');
+                    eventLocation.className = "event-location dfaic";
+                
+                    const eventImg = document.createElement('img');
+                    eventImg.src = "https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg";
+                
+                    const eventSpan = document.createElement('span');
+                    eventSpan.className = "place fc-sub";
+                    eventSpan.textContent = spotData.Address;
+                
+                    eventLocation.append(eventImg, eventSpan);
+
+                    const spotLink = document.createElement('a');
+                    spotLink.href =`detail.html?id=${spotData.ScenicSpotID}`
+
+                    spotLink.append(spotPic, spotName, eventLocation);
+                    spotBox.appendChild(spotLink);
+                    return spotBox;
+                }
+                /* <div class="spot-box">
+                    <div class="spot-1 spot-pic"></div>
+                    <p class="spot-name fc-pri fw-7">龜山島牛奶海</p>
+                    <div class="event-location dfaic">
+                        <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
+                        <span class="place fc-sub">宜蘭縣</span>
+                    </div>
+                  </div> */
+                const spotMain = document.querySelector('#spot-main');
+               // 先過濾有圖片的資料
+                const validSpots = apiData.filter(spotData => spotData?.Picture?.PictureUrl1);
+                // 隨機打亂順序
+                const randomSpots = validSpots.sort(() => Math.random() - 0.5);
+                // 取前4筆
+                randomSpots.slice(0, 4).forEach(spotData => {
+                    const spotBox = createSpotBox(spotData);
+                    spotMain.appendChild(spotBox);
+                });
+
+            },
+            error: function (xhr, textStatus, thrownError) {
+                console.log('errorStatus:',textStatus);
+                console.log('Error:',thrownError);
+            }
+        });
+    }
+}
+
+function loadFood(){
+    let accesstokenStr = $("#accesstoken").text();    
+    let accesstoken = JSON.parse(accesstokenStr); 
+    if(accesstoken !=undefined){
+        $.ajax({
+            type: 'GET',
+            url: 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Restaurant?%24top=4&%24format=JSON',             
+            headers: {
+                "authorization": "Bearer " + accesstoken.access_token,
+              },            
+            async: false,
+            success: function (apiData) {
+                console.log(apiData);
+                function createFoodBox(foodData){
+                    const foodBox = document.createElement('div');
+                    foodBox.className = "spot-box";
+                
+                    const spotPic = document.createElement("div");
+                    spotPic.className = "food-1 spot-pic";
+                    spotPic.style.backgroundImage = `url(${foodData.Picture.PictureUrl1})`;
+
+                    const spotName = document.createElement('p');
+                    spotName.className = "spot-name fc-pri fw-7";
+                    spotName.textContent = foodData.RestaurantName;
+                
+                    const eventLocation = document.createElement('div');
+                    eventLocation.className = "event-location dfaic";
+                
+                    const eventImg = document.createElement('img');
+                    eventImg.src = "https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg";
+                
+                    const eventSpan = document.createElement('span');
+                    eventSpan.className = "place fc-sub";
+                    eventSpan.textContent = foodData.Address;
+                
+                    eventLocation.append(eventImg, eventSpan);
+                
+                    const spotLink = document.createElement('a');
+                    spotLink.href =`detail.html?id=${foodData.RestaurantID}`
+                
+                    spotLink.append(spotPic, spotName, eventLocation);
+                    foodBox.appendChild(spotLink);
+                    return foodBox;
+                }
+                
+                /* <div class="spot-box">
+                <div class="food-1 spot-pic"></div>
+                <p class="spot-name fc-pri fw-7">金都餐廳</p>
+                <div class="event-location dfaic">
+                    <img src="https://raw.githubusercontent.com/maggie19921001/travel-taiwan/587c9b7686a4f37baa262727752c06943a18772a/css/images/Icon/spot16.svg" alt="">
+                    <span class="place fc-sub">南投縣</span>
+                </div>
+                </div> */
+
+                const foodMain = document.querySelector('#food-main');
+                apiData.forEach(foodData=>{
+                    const foodBox = createFoodBox(foodData);
+                    foodMain.appendChild(foodBox);
+                })
+
+            },
+            error: function (xhr, textStatus, thrownError) {
+                console.log('errorStatus:',textStatus);
+                console.log('Error:',thrownError);
+            }
+        });
+    }
+}
+
 

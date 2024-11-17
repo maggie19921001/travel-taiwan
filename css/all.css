@@ -397,7 +397,7 @@ a{
     border-radius: 12px;
     display: flex;
 }
-.event-1{
+/* .event-1{
     background-image: url(images/photo/event-1.jpeg);
 }
 .event-2{
@@ -408,7 +408,7 @@ a{
 }
 .event-4{
     background-image: url(images/photo/event-4.jpeg);
-}
+} */
 .event-pic{
     width: 160px;
     height: 160px;
@@ -423,14 +423,14 @@ a{
     flex-direction: column;
     justify-content: space-around;
     padding-left: 30px;
-    margin-top: 16px;
+    margin-top: 5px;
 }
 .event-name{
     font-size: 22px;
     margin-top: 3px;
     max-width: 320px;
     height: 60px;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 .event-detail{
     max-width: 100%;
@@ -468,7 +468,7 @@ a{
     /* height: 302px; */
     max-width: 255px;
 }
-.spot-1{
+/* .spot-1{
     background-image: url(images/photo/spot-1.jpeg);
 }
 .spot-2{
@@ -479,7 +479,7 @@ a{
 }
 .spot-4{
     background-image: url(images/photo/spot-4.jpeg);
-}
+} */
 .spot-pic{
     min-width: 255px;
     height: 200px;
@@ -511,7 +511,7 @@ a{
 }
 /*----------------------------part5 Good food--------------------------*/
 /*基本規格與hotspot相同，僅置換圖片*/
-.food-1{
+/* .food-1{
     background-image: url(images/photo/food-1.jpg);
 }
 .food-2{
@@ -522,7 +522,7 @@ a{
 }
 .food-4{
     background-image: url(images/photo/food-4.jpg);
-}
+} */
 /*----------------------------part6 Footer--------------------------*/
 .footer-w{
     height: 60px;
@@ -531,6 +531,7 @@ a{
     color: #FFFFFF;
     font-size: 14px;
     justify-content: center;
+    gap: 20px;
 }
 @media (max-width:768px) {
     .footer-w{
